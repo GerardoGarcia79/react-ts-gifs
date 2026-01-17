@@ -1,13 +1,7 @@
-import { useState } from "react";
+import { useCounter } from "../hooks/useCounter";
 
 export const MyCounterApp = () => {
-  const [counter, setCounter] = useState(5);
-
-  const handleAdd = () => setCounter((prev) => prev + 1);
-
-  const handleSubtract = () => setCounter((prev) => prev - 1);
-
-  const handleReset = () => setCounter(5);
+  const { counter, handleAdd, handleSubtract, handleReset } = useCounter(5);
 
   return (
     <div
